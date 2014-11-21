@@ -1,0 +1,30 @@
+application: mgillette-net
+module: default
+version: rev0001
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: default.wsgi
+
+libraries:
+- name: jinja2
+  version: "latest"
+
+pagespeed:
+  enabled_rewriters:
+  - MinifyCss
+  - CombineJs
+  - CombineCss
+  - ConvertMetaTags
+  - ElideAttributes
+  - CollapseWhitespace
+  - ProxyCss
+  - InlineCss
+  - WebpOptimization
+  - LazyloadImages
+  - ImageResize
+  disabled_rewriters:
+  - FlushSubresources

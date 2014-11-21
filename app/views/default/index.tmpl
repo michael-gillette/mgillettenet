@@ -1,0 +1,122 @@
+{% extends "default.master" %}
+{% block title %}Michael Gillette .:. I write code{% endblock %}
+
+{% block head %}
+<script async src="//{{ cdn_host }}/js/app/default.index.js"></script>
+<style>
+.mg-nav { background:#2C3E50;color:#fff; }
+.mg-flavor { margin:0;padding:15px;font-size:16px;font-weight:300; }
+.mg-foot { border:2px solid #222;margin:40px 0; }
+article { padding-top:45px;}
+.summary { font-weight:300;font-size:16px;margin-top:15px; }
+.image-well { height:300px;}
+li img { cursor:pointer; }
+.active { background:#ddd; }
+.active img { opacity:0.75; }
+</style>
+{% endblock %}
+
+{% block body_section %}
+<div class="mg-nav">
+    <div class="row">
+        <div class="large-7 columns text-right">
+            <p class="mg-flavor">
+                My name is <strong>Michael Gillette</strong>.
+                I live in Chico, CA and I create <strong>solutions</strong>.
+            </p>
+        </div>
+        <div class="large-5 columns">
+            <p class="mg-flavor">
+                Email <a href="mailto:me@michaelgillette.net">me@michaelgillette.net</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<article class="slide row">
+    <div class="gallery large-6 columns text-center">
+        <div class="image-well"><img src="//{{ cdn_host }}/image/now-build-0.png" width="500px" /></div>
+        <ul class="small-block-grid-3">
+            <li class="active"><img src="//{{ cdn_host }}/image/now-build-0.png" /></li>
+            <li><img src="//{{ cdn_host }}/image/now-build-1.png" /></li>
+            <li><img src="//{{ cdn_host }}/image/now-build-2.png" /></li>
+        </ul>
+    </div>
+    <div class="synopsis large-6 columns">
+        <h2>Now.Build</h2>
+        <abbr>April 2014 - Present</abbr>
+        <p class="summary">
+            Now.Build is a family of e-commerce companies that originated as Zojo Media. Here a lot of responsibilities landed on my lap, including application architecture and implementation. I wrote a third party tool for <strong>Magento</strong> where shipping information may be updated by remote support personnel. I wrote the Hinge Configurator on <strong>CabinetHub.com</strong>. I managed the import of inventory into FastFaucet.com using a custom application I wrote on AppEngine. 
+        </p>
+    </div>
+</article>
+
+<article class="slide row">
+    <div class="gallery large-6 columns text-center">
+        <div class="image-well"><img src="//{{ cdn_host }}/image/marketfleet-1.png" width="500px" /></div>
+        <ul class="small-block-grid-3">
+            <li class="active"><img src="//{{ cdn_host }}/image/marketfleet-1.png" /></li>
+            <li><img src="//{{ cdn_host }}/image/marketfleet-2.png" /></li>
+            <li><img src="//{{ cdn_host }}/image/marketfleet-3.png" /></li>
+        </ul>
+    </div>
+    <div class="synopsis large-6 columns">
+        <h2>MarketFleet.com</h2>
+        <abbr>June 2012 - September 2013</abbr>
+        <p class="summary">
+            MarketFleet provides a white label solution for retailers to setup a Marketplace. As <strong>Software Developer</strong> at MarketFleet I was responsible for implementing the Seller/Retailer platform interactions in addition to a Product Catalog import service. I wrote our API documentation, complete with libraries in Python, PHP, and Ruby, as well as some video. To support our clients with large product catalogs (~800K entities) I created and managed a webservice to facilitate CSV imports on <strong>Google Compute Engine</strong>. The HTTP side is built in <strong>Django</strong>, with tasks executed with <strong>Celery</strong>. The API is built in <strong>Python</strong> and hosted on <strong>Google App Engine</strong>.
+        </p>
+    </div>
+</article>
+
+<article class="slide row">
+    <div class="gallery large-6 columns text-center">
+        <div class="image-well"><img src="//{{ cdn_host }}/image/qbillion-1.png" width="500px" /></div>
+        <ul class="small-block-grid-3">
+            <li class="active"><img src="//{{ cdn_host }}/image/qbillion-1.png" /></li>
+            <li><img src="//{{ cdn_host }}/image/qbillion-2.jpg" /></li>
+            <li><img src="//{{ cdn_host }}/image/qbillion-3.png" /></li>
+        </ul>
+    </div>
+    <div class="synopsis large-6 columns">
+        <h2>Qbillion.com</h2>
+        <abbr>February 2011 - January 2012</abbr>
+        <p class="summary">
+            As <strong>Software Developer</strong> at QBillion my responsiblities involved implementation of the Earnings Analyzer product and optimization of data import. The platform digested CSV files, provided by Edgar Online (the finance statement feed is ~1.5gb), into the <strong>Google App Engine</strong> datastore. A <strong>Django</strong> application, initial page loads took up to 15 seconds to render and 8 hours to import. By switching from the <strong>Non-Rel</strong> mixin and updated definitions of the data (from a MySQL philosophy to a NoSQL one) I managed to reduce the page load to 3-4 seconds, and imports down to an hour and a fraction of the cost.
+        </p>
+    </div>
+</article>
+
+<article class="slide row">
+    <div class="gallery large-6 columns text-center">
+        <div class="image-well"><img src="//{{ cdn_host }}/image/auctiva-1.png" width="500px" /></div>
+        <ul class="small-block-grid-3">
+            <li class="active"><img src="//{{ cdn_host }}/image/auctiva-1.png" /></li>
+            <li><img src="//{{ cdn_host }}/image/auctiva-2.jpg" /></li>
+            <li><img src="//{{ cdn_host }}/image/auctiva-3.jpeg" /></li>
+        </ul>
+    </div>
+    <div class="synopsis large-6 columns">
+        <h2>Auctiva.com</h2>
+        <abbr>November 2009 - February 2011</abbr>
+        <p class="summary">
+            As a <strong>Junior Software Developer</strong> at Auctiva.com I worked with the remote San Jose team towards making Elefy.com, an <strong>ASP.NET MVC</strong> application powered by the Auctiva Marketplace Platform (AMP). During this time I also worked on Auctiva's Shipping Insurance Seller Tool for the eBay platform. The application itself was my introduction to <strong>Python</strong> and <strong>Google App Engine</strong>. I also worked with the BuyShield team and AuctionSniper team to make various front-end changes. After Alibaba purchased Auctiva, I moved to the Auctiva.com team where I worked with Designers to implement frontend changes. At the end of my time at Auctiva I was working on a Localizer script to make simple translation for the whole website. 
+        </p>
+    </div>
+</article>
+
+
+
+
+<div class="row">
+    <div class="large-3 columns large-centered mg-foot text-center">
+        <dl>
+            <dt>Email</dt>
+            <dd>me@michaelgillette.net</dd>
+            <dt>Phone</dt>
+            <dd>(805) 210-0955</dd>
+        </dl>
+    </div>
+</div>
+{% endblock %}

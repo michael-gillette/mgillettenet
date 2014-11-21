@@ -1,0 +1,42 @@
+application: mgillette-net
+module: cdn
+version: rev0001
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /js
+  static_dir: js
+  expiration: "30d 4h"
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+- url: /css
+  static_dir: css
+  expiration: "30d 4h"
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+- url: /image
+  static_dir: image
+  expiration: "30d 4h"
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+- url: /favicon\.ico
+  static_files: image/favicon.ico
+  upload: image/favicon.ico
+
+pagespeed:
+  enabled_rewriters:
+  - MinifyCss
+  - CombineJs
+  - CombineCss
+  - ConvertMetaTags
+  - ElideAttributes
+  - CollapseWhitespace
+  - ProxyCss
+  - InlineCss
+  - WebpOptimization
+  - LazyloadImages
+  - ImageResize
+  disabled_rewriters:
+  - FlushSubresources

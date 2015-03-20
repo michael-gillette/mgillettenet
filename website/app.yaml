@@ -1,0 +1,14 @@
+application: mgillette-net
+module: default
+version: rev2001
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: wsgi.app
+
+libraries:
+- name: jinja2
+  version: "latest"

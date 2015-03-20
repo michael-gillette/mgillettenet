@@ -1,0 +1,23 @@
+application: mgillette-net
+module: cdn
+version: rev2001
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /js
+  static_dir: javascripts
+  expiration: "30d 4h"
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+- url: /css
+  static_dir: stylesheets
+  expiration: "30d 4h"
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+- url: /vendor
+  static_dir: vendor
+  expiration: "30d 4h"
+  http_headers:
+    Access-Control-Allow-Origin: "*"

@@ -1,0 +1,32 @@
+{
+  "name": "michaelgillette.net",
+  "version": "0.1",
+  "authors": [
+    "Michael Gillette <me@michaelgillette.net>"
+  ],
+  "description": "Personal Website",
+  "license": "MIT",
+  "homepage": "www.michaelgillette.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "semantic-ui": "~1.11.4"
+  },
+  "install": {
+    "path": "cdn/vendor",
+    "sources": {
+      "jquery": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/jquery/dist/jquery.min.map"
+      ],
+      "semantic-ui": "bower_components/semantic-ui/dist/**"
+    }
+  }
+}

@@ -6,6 +6,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /images
+  static_dir: images
+  expiration: "30d 4h"
 - url: /js
   static_dir: javascripts
   expiration: "30d 4h"

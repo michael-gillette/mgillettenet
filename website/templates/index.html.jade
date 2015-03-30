@@ -1,0 +1,77 @@
+extends layout.html.jade
+
+block title
+  title Michael Gillette, Software Writer
+
+block append assets
+  link(rel="stylesheet", href="//{{ cdn_host }}/css/website.css")
+
+block content
+  header
+    .ui.inverted.purple.vertical.segment
+      .ui.page.grid
+        .ten.wide.column
+          h3.ui.inverted.narrow.header My name is 
+            strong Michael Gillette
+            span . I live in Chico, CA and I write 
+            strong solutions.
+        .six.wide.right.aligned.column
+          a(href="mailto:me@michaelgillette.net", title="Email Me").circular.ui.icon.button
+            i.mail.outline.icon
+          a(href="//www.github.com/michael-gillette", target="_blank", title="Github").circular.ui.icon.button
+            i.github.alternate.icon
+          a(href="//www.linkedin.com/pub/michael-gillette/34/778/b01", target="_blank", title="LinkedIn").circular.ui.icon.button
+            i.linkedin.icon
+          a(href="//www.youtube.com/user/themichaelgillette/videos", target="_blank", title="Youtube").circular.ui.icon.button
+            i.youtube.play.icon
+  #content
+    .ui.page.grid
+      .two.column.row
+        .column
+          img.ui.fluid.rounded.image(src="//{{ cdn_host }}/images/now-build-1.png")
+        .column
+          h1.ui.header
+            .content Now Build, Inc.
+            .sub.header Software Developer - April 2014 to Present
+          p
+            | Formerly Zojo Media. At Now Build I managed a suite of e-commerce websites running on 
+            a(href="http://www.cabinethub.com", target="_blank") Magento 
+            | and 
+            a(href="http://www.cabinetnow.com", target="_blank") Virtuemart
+            | . I implemented the Magento SOAP service in two major ways. The first, a shipping status update webapp. The second, 
+            a(href="http://www.cabinethub.com/hinge-configurator", target="_blank") a hinge configurator 
+            | to enable the customer to make informed door boring decisions.
+          p
+            | To manage the pricing and inventory of 
+            a(href="http://www.fastfaucet.com", target="_blank") FastFaucet.com 
+            | I architected and developed a product data collection engine 
+            | internally called Eskumo. Eskumo is built on Google App Engine with Python and was the key to managing the 14k products on the website.
+          p
+            | I worked with our team to design and develop the BuildSmart app, a price finding application, using TriggerIO.
+      .two.column.row
+        .column
+          img.ui.fluid.rounded.image(src="//{{ cdn_host }}/images/marketfleet-2.png")
+        .column
+          h1.ui.header
+            .content MarketFleet.com
+            .sub.header Software Developer - June 2012 to September 2013
+          p
+            | MarketFleet provides a white label solution for retailers to setup a Marketplace. As Software Developer at MarketFleet I was responsible for implementing the Seller/Retailer platform interactions in addition to a Product Catalog import service. I wrote our API documentation, complete with libraries in Python, PHP, and Ruby, as well as some video. To support our clients with large product catalogs (~800K entities) I created and managed a webservice to facilitate CSV imports on Google Compute Engine. The HTTP side is built in Django, with tasks executed with Celery. The API is built in Python and hosted on Google App Engine.
+      .two.column.row
+        .column
+          img.ui.fluid.rounded.image(src="//{{ cdn_host }}/images/qbillion-2.jpg")
+        .column
+          h1.ui.header
+            .content Qbillion, Inc.
+            .sub.header Software Developer - February 2011 to January 2012
+          p
+            | As Software Developer at QBillion my responsiblities involved implementation of the Earnings Analyzer product and optimization of data import. The platform digested CSV files, provided by Edgar Online (the finance statement feed is ~1.5gb), into the Google App Engine datastore. A Django application, initial page loads took up to 15 seconds to render and 8 hours to import. By switching from the Non-Rel mixin and updated definitions of the data (from a MySQL philosophy to a NoSQL one) I managed to reduce the page load to 3-4 seconds, and imports down to an hour and a fraction of the cost.
+      .two.column.row
+        .column
+          img.ui.fluid.rounded.image(src="//{{ cdn_host }}/images/auctiva-2.jpg")
+        .column
+          h1.ui.header
+            .content Auctiva.com
+            .sub.header Software Developer - November 2009 to February 2011
+          p
+            | As a Junior Software Developer at Auctiva.com I worked with the remote San Jose team towards making Elefy.com, an ASP.NET MVC application powered by the Auctiva Marketplace Platform (AMP). During this time I also worked on Auctiva's Shipping Insurance Seller Tool for the eBay platform. The application itself was my introduction to Python and Google App Engine. I also worked with the BuyShield team and AuctionSniper team to make various front-end changes. After Alibaba purchased Auctiva, I moved to the Auctiva.com team where I worked with Designers to implement frontend changes. At the end of my time at Auctiva I was working on a Localizer script to make simple translation for the whole website.

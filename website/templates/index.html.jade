@@ -16,14 +16,16 @@ block content
             span . I live in Chico, CA and I write 
             strong solutions.
         .six.wide.right.aligned.column
-          a(href="mailto:me@michaelgillette.net", title="Email Me").circular.ui.icon.button
-            i.mail.outline.icon
           a(href="//www.github.com/michael-gillette", target="_blank", title="Github").circular.ui.icon.button
             i.github.alternate.icon
           a(href="//www.linkedin.com/pub/michael-gillette/34/778/b01", target="_blank", title="LinkedIn").circular.ui.icon.button
             i.linkedin.icon
           a(href="//www.youtube.com/user/themichaelgillette/videos", target="_blank", title="Youtube").circular.ui.icon.button
             i.youtube.play.icon
+          a(href="mailto:me@michaelgillette.net", title="Email Me").circular.ui.icon.button
+            i.mail.outline.icon
+          a(href="//{{ cdn_host }}/images/MichaelGilletteResume.pdf", target="_blank", title="Resume").circular.ui.icon.button
+            i.file.pdf.outline.icon
   #content
     .ui.page.grid
       .two.column.row
@@ -56,7 +58,12 @@ block content
             .content MarketFleet.com
             .sub.header Software Developer - June 2012 to September 2013
           p
-            | MarketFleet provides a white label solution for retailers to setup a Marketplace. As Software Developer at MarketFleet I was responsible for implementing the Seller/Retailer platform interactions in addition to a Product Catalog import service. I wrote our API documentation, complete with libraries in Python, PHP, and Ruby, as well as some video. To support our clients with large product catalogs (~800K entities) I created and managed a webservice to facilitate CSV imports on Google Compute Engine. The HTTP side is built in Django, with tasks executed with Celery. The API is built in Python and hosted on Google App Engine.
+            | MarketFleet's value proposition was a marketplace platform for retailers and resellers. 
+            | I designed and developed the Seller Portal for the Betty Mills white labeled product. 
+            | I wrote the API documentation and created tutorial videos on interacting with the platform. I wrote the API examples for Python, PHP, and Ruby. 
+            | 
+          p
+            | I managed the FTP service for uploading files on Compute Engine and wrote a PyDaemon script to monitor changes to run an import. For a more managed service I wrote a Django/Celery webservice for clients without FTP. The largest client we had provided a catalog with 800k products.
       .two.column.row
         .column
           img.ui.fluid.rounded.image(src="//{{ cdn_host }}/images/qbillion-2.jpg")
@@ -65,7 +72,12 @@ block content
             .content Qbillion, Inc.
             .sub.header Software Developer - February 2011 to January 2012
           p
-            | As Software Developer at QBillion my responsiblities involved implementation of the Earnings Analyzer product and optimization of data import. The platform digested CSV files, provided by Edgar Online (the finance statement feed is ~1.5gb), into the Google App Engine datastore. A Django application, initial page loads took up to 15 seconds to render and 8 hours to import. By switching from the Non-Rel mixin and updated definitions of the data (from a MySQL philosophy to a NoSQL one) I managed to reduce the page load to 3-4 seconds, and imports down to an hour and a fraction of the cost.
+            | I worked with an international team to build an analyzer of SEC public filings. 
+            | We built the web application using Django on AppEngine with Django-NonRel and the MapReduce library.
+          p
+            | By redefining the model relationships to fit a NoSQL schema I reduced the import of the 1.5gb feed from 8 hours and $40, to 45 minutes and $5. A by-product of this was the page load time on the Earnings Analyzer webview going from 15 seconds to 3.5 seconds. 
+          p
+            | I worked with the Founder to produce the Earnings Analyzer view. A user would enter a stock symbol then navigate the analyzed data via tables and graphs to make informed investment decisions.
       .two.column.row
         .column
           img.ui.fluid.rounded.image(src="//{{ cdn_host }}/images/auctiva-2.jpg")
@@ -74,4 +86,37 @@ block content
             .content Auctiva.com
             .sub.header Software Developer - November 2009 to February 2011
           p
-            | As a Junior Software Developer at Auctiva.com I worked with the remote San Jose team towards making Elefy.com, an ASP.NET MVC application powered by the Auctiva Marketplace Platform (AMP). During this time I also worked on Auctiva's Shipping Insurance Seller Tool for the eBay platform. The application itself was my introduction to Python and Google App Engine. I also worked with the BuyShield team and AuctionSniper team to make various front-end changes. After Alibaba purchased Auctiva, I moved to the Auctiva.com team where I worked with Designers to implement frontend changes. At the end of my time at Auctiva I was working on a Localizer script to make simple translation for the whole website.
+            | I started as an intern on the Auctiva Marketplace Platform team. After 3 months Auctiva offered me a Junior Frontend Developer position on the same team. From the Chico office I coordinated with the San Mateo office to build the Product Page and Checkout Flow on Elefy, an AMP storefront. During this time I learned to use the ASP.NET MVC platform.
+          p
+            | I started in Python and Google App Engine with Auctiva's Shipping Insurance app for the eBay 3rd party seller platform. I also assisted the AuctionSniper and BuyShield teams, frontend and backend. Because of this additional experience Auctiva promoted me to Software Developer.
+          p
+            | When Auctiva transitioned me to the core Auctiva product I worked on Auctiva.com, and Auctiva Commerce. At the end of my time at Auctiva I was working on a way to localize an entire ASP.NET web application.
+      .ui.divider
+      .two.column.row
+        .column
+          .ui.header Michael Gillette
+          .content
+            | 24 year old Software Writer from Southern California. I live to learn and love to create. 
+        .column
+          .ui.header Languages 
+            small by years
+          .ui.purple.progress(data-value='7', data-total='7')
+            .bar
+              .progress
+            .label JavaScript
+          .ui.purple.progress(data-value='7', data-total='7')
+            .bar
+              .progress
+            .label HTML/CSS
+          .ui.purple.progress(data-value='6', data-total='7')
+            .bar
+              .progress
+            .label PHP - Magento, Joomla, Wordpress, Composer
+          .ui.purple.progress(data-value='5', data-total='7')
+            .bar
+              .progress
+            .label Python - Django, Flask, WebOb, 2.7, 3.4
+
+block append scripts
+  script.
+    jQuery('.ui.progress').progress({label:'ratio', className: {success:'active'}});

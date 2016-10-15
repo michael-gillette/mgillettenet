@@ -1,6 +1,9 @@
 # Mac OSX
 .DS_Store
 
+# JetBrains
+.idea/
+
 # Bower
 bower_components/
 cdn/vendor/
